@@ -187,6 +187,10 @@ Highcharts.chart('container', {
                     click: function(){
                        // do whatever here
                     //    location.href = this.options.url;
+                    if(this.options.id === '0.0' || this.options.id === '1.1' || this.options.id === '1.2' )
+                    {
+                      return;
+                    }
                        window.open(
                         this.options.url,
   '_blank' // <- This is what makes it open in a new window.
