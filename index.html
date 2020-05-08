@@ -15,7 +15,7 @@
   <style id="compiled-css" type="text/css">
       #container {
 	min-width: 310px;
-	max-width: 700px;
+	max-width: 650px;
 	margin: 0 auto
 }
 .highcharts-credits, .highcharts-title {
@@ -210,18 +210,37 @@ Highcharts.chart('container', {
             level: 1,
             levelIsConstant: false,
             dataLabels: {
+              color: '#179ad7',
                 filter: {
                     property: 'outerArcLength',
                     operator: '>',
                     value: 64
-                }
+                },
+                style: {
+                  fontSize: '15px',
+                  textOverflow: 'none'
+                },
+                y: -30
             }
         }, {
             level: 2,
             colorByPoint: true,
+            dataLabels: {
+            style: {
+                  fontSize: '15px'
+                }
+              }
         },
         {
             level: 3,
+            levelSize: {
+              value: 2
+            },
+            dataLabels: {
+            style: {
+                  fontSize: '13px'
+                }
+              },
             colorVariation: {
                 key: 'brightness',
                 // to: -0.5
